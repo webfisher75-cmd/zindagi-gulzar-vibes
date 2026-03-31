@@ -116,7 +116,7 @@ export const products: Product[] = [
     price: 399,
     image: 'https://images.unsplash.com/photo-1572490122747-3968b75cc699?w=400',
     category: 'mugs',
-    description: 'Mirza Ghalib's iconic shayari on a premium ceramic mug. For the true lover of words.',
+    description: "Mirza Ghalib's iconic shayari on a premium ceramic mug. For the true lover of words.",
   },
   {
     id: 'p8',

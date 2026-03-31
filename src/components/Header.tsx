@@ -8,7 +8,7 @@ const navLinks = [
   { label: 'Viral News', path: '/category/viral-news' },
   { label: 'Stories', path: '/category/emotional-stories' },
   { label: 'Shayari', path: '/category/shayari' },
-  { label: 'Quotes', path: '/category/quotes' },
+  { label: 'Shop', path: '/shop' },
   { label: 'About', path: '/about' },
 ];
 

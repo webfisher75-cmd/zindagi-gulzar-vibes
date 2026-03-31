@@ -1,11 +1,11 @@
 import { Link, useLocation } from 'react-router-dom';
-import { Home, Flame, Heart, PenTool, User } from 'lucide-react';
+import { Home, Flame, Heart, ShoppingBag, User } from 'lucide-react';
 
 const links = [
   { icon: Home, label: 'Home', path: '/' },
   { icon: Flame, label: 'Trending', path: '/category/viral-news' },
   { icon: Heart, label: 'Stories', path: '/category/emotional-stories' },
-  { icon: PenTool, label: 'Shayari', path: '/category/shayari' },
+  { icon: ShoppingBag, label: 'Shop', path: '/shop' },
   { icon: User, label: 'About', path: '/about' },
 ];
 
