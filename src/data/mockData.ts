@@ -1,0 +1,238 @@
+export type Category = 'viral-news' | 'emotional-stories' | 'shayari' | 'quotes' | 'motivation' | 'life-stories' | 'social-stories';
+
+export type Mood = 'sad' | 'love' | 'motivation' | 'alone' | 'happy';
+
+export interface Post {
+  id: string;
+  title: string;
+  excerpt: string;
+  content: string;
+  category: Category;
+  mood: Mood[];
+  image: string;
+  date: string;
+  author: string;
+  likes: number;
+  shares: number;
+  isTrending: boolean;
+  isFeatured: boolean;
+}
+
+export const categoryLabels: Record<Category, string> = {
+  'viral-news': 'Viral News',
+  'emotional-stories': 'Emotional Stories',
+  'shayari': 'Shayari',
+  'quotes': 'Quotes',
+  'motivation': 'Motivation',
+  'life-stories': 'Life Stories',
+  'social-stories': 'Social Stories',
+};
+
+export const categoryIcons: Record<Category, string> = {
+  'viral-news': '🔥',
+  'emotional-stories': '💔',
+  'shayari': '✍️',
+  'quotes': '💬',
+  'motivation': '💪',
+  'life-stories': '📖',
+  'social-stories': '🌍',
+};
+
+export const moodEmojis: Record<Mood, string> = {
+  sad: '😢',
+  love: '❤️',
+  motivation: '🔥',
+  alone: '🌙',
+  happy: '😊',
+};
+
+export const moodLabels: Record<Mood, string> = {
+  sad: 'Sad',
+  love: 'Love',
+  motivation: 'Motivation',
+  alone: 'Alone',
+  happy: 'Happy',
+};
+
+export const posts: Post[] = [
+  {
+    id: '1',
+    title: 'एक बेटे ने अपनी माँ के लिए किया कुछ ऐसा, रो पड़ेंगे आप',
+    excerpt: 'गरीब परिवार का बेटा, जिसने अपनी माँ के इलाज के लिए 3 साल तक दो-दो शिफ्ट में काम किया। उसकी कहानी सुनकर पूरा शहर भावुक हो गया।',
+    content: 'राजस्थान के एक छोटे से गाँव में रहने वाले 22 साल के अर्जुन ने अपनी बीमार माँ के इलाज के लिए दिन-रात मेहनत की। पिता के गुजरने के बाद, परिवार की सारी ज़िम्मेदारी उसके कंधों पर आ गई...',
+    category: 'emotional-stories',
+    mood: ['sad', 'motivation'],
+    image: 'https://images.unsplash.com/photo-1516627145497-ae6968895b74?w=600&h=400&fit=crop',
+    date: '2026-03-30',
+    author: 'Zindagi Gulzar',
+    likes: 24500,
+    shares: 8900,
+    isTrending: true,
+    isFeatured: true,
+  },
+  {
+    id: '2',
+    title: 'वो शायरी जो हर टूटे दिल की आवाज़ है',
+    excerpt: '"तुम्हारी यादों का साया है, हर रात बेचैन कर जाता है, ना तुम आते हो, ना ख्वाब बदलते हैं।"',
+    content: 'दिल टूटने का दर्द शब्दों में बयान करना मुश्किल है, लेकिन शायरी वो ज़रिया है जो दिल की गहराइयों को छू लेती है...',
+    category: 'shayari',
+    mood: ['sad', 'alone', 'love'],
+    image: 'https://images.unsplash.com/photo-1455390582262-044cdead277a?w=600&h=400&fit=crop',
+    date: '2026-03-29',
+    author: 'Zindagi Gulzar',
+    likes: 18200,
+    shares: 12400,
+    isTrending: true,
+    isFeatured: true,
+  },
+  {
+    id: '3',
+    title: 'पुलिस ऑफिसर ने बच्चों के लिए खोला मुफ्त स्कूल',
+    excerpt: 'दिल्ली के एक IPS ऑफिसर ने अपनी सैलरी से गरीब बच्चों के लिए मुफ्त स्कूल खोला। 200 से ज्यादा बच्चे आज पढ़ रहे हैं।',
+    content: 'IPS ऑफिसर विकास शर्मा ने जब देखा कि उनके इलाके के सैकड़ों बच्चे स्कूल नहीं जा पा रहे, तो उन्होंने एक बड़ा कदम उठाया...',
+    category: 'viral-news',
+    mood: ['happy', 'motivation'],
+    image: 'https://images.unsplash.com/photo-1497633762265-9d179a990aa6?w=600&h=400&fit=crop',
+    date: '2026-03-28',
+    author: 'Zindagi Gulzar',
+    likes: 31200,
+    shares: 15600,
+    isTrending: true,
+    isFeatured: false,
+  },
+  {
+    id: '4',
+    title: '"ज़िन्दगी एक सफर है, मंज़िल तो बस बहाना है"',
+    excerpt: 'कभी हार मत मानो। जो लोग गिरकर उठते हैं, वही असली हीरो हैं। ये quote आपकी सोच बदल देगा।',
+    content: 'जीवन में कई बार ऐसे मोड़ आते हैं जब लगता है कि सब खत्म हो गया। लेकिन याद रखिए, हर अंधेरी रात के बाद सवेरा ज़रूर आता है...',
+    category: 'quotes',
+    mood: ['motivation', 'happy'],
+    image: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=600&h=400&fit=crop',
+    date: '2026-03-28',
+    author: 'Zindagi Gulzar',
+    likes: 14800,
+    shares: 6200,
+    isTrending: false,
+    isFeatured: true,
+  },
+  {
+    id: '5',
+    title: '72 साल की दादी ने पास किया UPSC, बनीं प्रेरणा',
+    excerpt: 'उम्र सिर्फ एक नंबर है – ये साबित किया 72 साल की सावित्री देवी ने, जिन्होंने UPSC क्लियर करके पूरे देश को हैरान कर दिया।',
+    content: 'सावित्री देवी, जो बिहार के एक छोटे से गाँव से आती हैं, ने 72 साल की उम्र में वो कर दिखाया जो लाखों नौजवान नहीं कर पाते...',
+    category: 'motivation',
+    mood: ['motivation', 'happy'],
+    image: 'https://images.unsplash.com/photo-1544027993-37dbfe43562a?w=600&h=400&fit=crop',
+    date: '2026-03-27',
+    author: 'Zindagi Gulzar',
+    likes: 45600,
+    shares: 28900,
+    isTrending: true,
+    isFeatured: false,
+  },
+  {
+    id: '6',
+    title: 'एक पिता की चिट्ठी जो बेटी की शादी पर लिखी गई',
+    excerpt: '"बेटी, तुम मेरी दुनिया हो। तुम्हारे बिना ये घर सूना हो जाएगा, लेकिन तुम्हारी खुशी में ही मेरी खुशी है।"',
+    content: 'शादी के दिन, जब सब मेहमान खुशियाँ मना रहे थे, एक पिता चुपचाप कोने में बैठकर अपनी बेटी के लिए चिट्ठी लिख रहा था...',
+    category: 'emotional-stories',
+    mood: ['sad', 'love'],
+    image: 'https://images.unsplash.com/photo-1511895426328-dc8714191300?w=600&h=400&fit=crop',
+    date: '2026-03-27',
+    author: 'Zindagi Gulzar',
+    likes: 52300,
+    shares: 34100,
+    isTrending: true,
+    isFeatured: true,
+  },
+  {
+    id: '7',
+    title: '"मोहब्बत वो नहीं जो दिखती है, मोहब्बत वो है जो महसूस होती है"',
+    excerpt: 'इश्क़ की गहराई को समझना हो तो ये शायरी पढ़िए। दिल को छू लेगी।',
+    content: 'मोहब्बत का मतलब सिर्फ साथ होना नहीं है। मोहब्बत तो वो एहसास है जो दूर रहकर भी करीब रखता है...',
+    category: 'shayari',
+    mood: ['love'],
+    image: 'https://images.unsplash.com/photo-1518199266791-5375a83190b7?w=600&h=400&fit=crop',
+    date: '2026-03-26',
+    author: 'Zindagi Gulzar',
+    likes: 29100,
+    shares: 19800,
+    isTrending: false,
+    isFeatured: false,
+  },
+  {
+    id: '8',
+    title: 'रिक्शा चलाने वाले ने बेटे को बनाया डॉक्टर',
+    excerpt: 'मुंबई की गलियों में रिक्शा चलाने वाले रमेश की कहानी सुनकर आपकी आँखें नम हो जाएँगी।',
+    content: 'रमेश हर सुबह 4 बजे उठते हैं। 18 घंटे रिक्शा चलाते हैं। एक ही सपना है – बेटा डॉक्टर बने...',
+    category: 'life-stories',
+    mood: ['motivation', 'sad'],
+    image: 'https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?w=600&h=400&fit=crop',
+    date: '2026-03-26',
+    author: 'Zindagi Gulzar',
+    likes: 38700,
+    shares: 22400,
+    isTrending: true,
+    isFeatured: false,
+  },
+  {
+    id: '9',
+    title: 'सोशल मीडिया पर वायरल हुआ ये वीडियो, 10 करोड़ व्यूज़',
+    excerpt: 'एक छोटे से गाँव की लड़की का गाना सुनकर पूरा इंटरनेट रो पड़ा। बॉलीवुड से मिला ऑफर।',
+    content: 'मध्य प्रदेश के एक छोटे से गाँव की 14 साल की प्रिया ने जब गाना गाया, तो किसी ने सोचा नहीं था कि ये वीडियो इतना वायरल हो जाएगा...',
+    category: 'social-stories',
+    mood: ['happy'],
+    image: 'https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=600&h=400&fit=crop',
+    date: '2026-03-25',
+    author: 'Zindagi Gulzar',
+    likes: 67800,
+    shares: 45200,
+    isTrending: true,
+    isFeatured: true,
+  },
+  {
+    id: '10',
+    title: '"अकेलापन भी एक दोस्त है, बस समझने वाला चाहिए"',
+    excerpt: 'रात के सन्नाटे में जब सब सो जाते हैं, तब अकेलापन सबसे ज़्यादा बोलता है। ये शायरी उन सब के लिए।',
+    content: 'अकेलापन बुरा नहीं है। ये वो वक़्त है जब आप खुद से मिलते हैं, खुद को समझते हैं...',
+    category: 'shayari',
+    mood: ['alone', 'sad'],
+    image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&h=400&fit=crop',
+    date: '2026-03-25',
+    author: 'Zindagi Gulzar',
+    likes: 21600,
+    shares: 14300,
+    isTrending: false,
+    isFeatured: false,
+  },
+  {
+    id: '11',
+    title: 'किसान ने उगाई सोने जैसी फसल, बना करोड़पति',
+    excerpt: 'राजस्थान के एक किसान ने नई तकनीक से खेती करके लाखों कमाए। अब दूसरे किसानों को भी सिखा रहे हैं।',
+    content: 'खेती को घाटे का सौदा कहने वालों को जवाब दिया है राजस्थान के किसान सुरेश ने...',
+    category: 'viral-news',
+    mood: ['motivation', 'happy'],
+    image: 'https://images.unsplash.com/photo-1574943320219-553eb213f72d?w=600&h=400&fit=crop',
+    date: '2026-03-24',
+    author: 'Zindagi Gulzar',
+    likes: 19400,
+    shares: 8700,
+    isTrending: false,
+    isFeatured: false,
+  },
+  {
+    id: '12',
+    title: '"खुश रहो, क्योंकि ज़िन्दगी बहुत छोटी है शिकायतों के लिए"',
+    excerpt: 'ये एक quote नहीं, ज़िन्दगी का सबक है। पढ़िए और शेयर कीजिए।',
+    content: 'हम अक्सर छोटी-छोटी बातों में इतने उलझ जाते हैं कि बड़ी खुशियाँ भूल जाते हैं...',
+    category: 'quotes',
+    mood: ['happy', 'motivation'],
+    image: 'https://images.unsplash.com/photo-1489710437720-ebb67ec84dd2?w=600&h=400&fit=crop',
+    date: '2026-03-24',
+    author: 'Zindagi Gulzar',
+    likes: 11200,
+    shares: 5600,
+    isTrending: false,
+    isFeatured: false,
+  },
+];
