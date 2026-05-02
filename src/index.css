@@ -140,3 +140,10 @@
     scrollbar-width: none;
   }
 }
+
+@media (max-width: 767px) {
+  .py-16 {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+}

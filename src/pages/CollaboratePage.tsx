@@ -11,7 +11,7 @@ const stats = [
 const CollaboratePage = () => {
   return (
     <Layout>
-      <section className="container mx-auto px-4 py-12 max-w-3xl">
+      <section className="container mx-auto px-4 py-4 md:py-12 max-w-3xl">
         <motion.div initial={{ opacity: 0, y: 15 }} animate={{ opacity: 1, y: 0 }}>
           <div className="text-center mb-12">
             <h1 className="font-display text-3xl md:text-4xl font-bold text-gradient-gold mb-3">

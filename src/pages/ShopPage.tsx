@@ -8,7 +8,7 @@ const trendNestUrl = 'https://trendnest99.in';
 const ShopPage = () => {
   return (
     <Layout>
-      <section className="relative overflow-hidden py-16 md:py-24">
+      <section className="relative overflow-hidden py-4 md:py-24">
         <div className="absolute inset-0 bg-gradient-to-b from-primary/10 via-transparent to-transparent" />
 
         <div className="container relative mx-auto px-4">

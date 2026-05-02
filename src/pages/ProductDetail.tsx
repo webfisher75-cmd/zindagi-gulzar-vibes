@@ -42,7 +42,7 @@ const ProductDetail = () => {
 
   return (
     <Layout>
-      <section className="py-8 md:py-16">
+      <section className="py-4 md:py-16">
         <div className="container mx-auto px-4">
           <Link to="/shop" className="inline-flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors mb-6">
             <ArrowLeft size={16} /> Back to Shop

@@ -5,7 +5,7 @@ import Layout from '@/components/Layout';
 const AboutPage = () => {
   return (
     <Layout>
-      <section className="container mx-auto px-4 py-12 max-w-3xl">
+      <section className="container mx-auto px-4 py-4 md:py-12 max-w-3xl">
         <motion.div initial={{ opacity: 0, y: 15 }} animate={{ opacity: 1, y: 0 }}>
           {/* Hero */}
           <div className="text-center mb-16">

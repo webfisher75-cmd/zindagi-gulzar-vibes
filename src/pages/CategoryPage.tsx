@@ -27,7 +27,7 @@ const CategoryPage = () => {
       {/* Banner */}
       <section className="relative bg-card border-b border-border">
         <div className="absolute inset-0 bg-gradient-to-br from-primary/8 to-transparent" />
-        <div className="container mx-auto px-4 py-12 md:py-16 relative">
+        <div className="container mx-auto px-4 py-4 md:py-16 relative">
           <Link to="/" className="inline-flex items-center gap-1 text-xs text-muted-foreground hover:text-primary transition-colors mb-4">
             <ArrowLeft size={14} /> Back to Home
           </Link>
@@ -42,7 +42,7 @@ const CategoryPage = () => {
       </section>
 
       {/* Search + Grid */}
-      <section className="container mx-auto px-4 py-8">
+      <section className="container mx-auto px-4 py-4 md:py-8">
         <div className="relative max-w-md mb-8">
           <Search size={16} className="absolute left-3 top-1/2 -translate-y-1/2 text-muted-foreground" />
           <input
@@ -61,7 +61,7 @@ const CategoryPage = () => {
             ))}
           </div>
         ) : (
-          <div className="text-center py-16">
+          <div className="text-center py-4 md:py-16">
             <p className="text-muted-foreground">No posts found in this category.</p>
           </div>
         )}

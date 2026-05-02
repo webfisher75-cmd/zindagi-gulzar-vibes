@@ -33,7 +33,7 @@ const CustomPrintPage = () => {
   if (submitted) {
     return (
       <Layout>
-        <div className="container mx-auto px-4 py-20 text-center space-y-4 max-w-lg">
+        <div className="container mx-auto px-4 py-4 md:py-20 text-center space-y-4 max-w-lg">
           <div className="w-16 h-16 bg-primary/20 rounded-full flex items-center justify-center mx-auto">
             <Palette size={32} className="text-primary" />
           </div>
@@ -51,7 +51,7 @@ const CustomPrintPage = () => {
 
   return (
     <Layout>
-      <section className="py-12 md:py-20">
+      <section className="py-4 md:py-20">
         <div className="container mx-auto px-4 max-w-2xl">
           <div className="text-center mb-10 space-y-3">
             <h1 className="font-display text-3xl md:text-4xl font-bold text-gradient-gold">

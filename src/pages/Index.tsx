@@ -26,7 +26,7 @@ const Index = () => {
       {/* Hero */}
       <section className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-b from-primary/5 via-transparent to-transparent" />
-        <div className="container mx-auto px-4 py-16 md:py-24 text-center relative">
+        <div className="container mx-auto px-4 py-4 md:py-24 text-center relative">
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
             <h1 className="font-display text-4xl md:text-6xl lg:text-7xl font-bold text-gradient-gold mb-4">
               Zindagi Gulzar
@@ -119,7 +119,7 @@ const Index = () => {
       </section>
 
       {/* Newsletter */}
-      <section className="container mx-auto px-4 py-16">
+      <section className="container mx-auto px-4 py-4 md:py-16">
         <div className="bg-card border border-border rounded-2xl p-8 md:p-12 text-center relative overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent" />
           <div className="relative">

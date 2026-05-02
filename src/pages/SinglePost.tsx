@@ -29,7 +29,7 @@ const SinglePost = () => {
 
   return (
     <Layout>
-      <article className="container mx-auto px-4 py-8 max-w-3xl">
+      <article className="container mx-auto px-4 py-4 md:py-8 max-w-3xl">
         <Link to="/" className="inline-flex items-center gap-1 text-xs text-muted-foreground hover:text-primary transition-colors mb-6">
           <ArrowLeft size={14} /> Back
         </Link>
