@@ -22,12 +22,13 @@ const PostCard = ({ post, variant = 'default' }: PostCardProps) => {
         whileHover={{ scale: 1.01 }}
         className="relative rounded-xl overflow-hidden group card-hover"
       >
-        <Link to={`/post/${post.id}`}>
-          <div className="aspect-[16/9] md:aspect-[21/9]">
+        <Link to={`/post/${post.id}`} className="block">
+          <div className="relative aspect-[16/10] md:aspect-[21/9]">
             <img src={post.image} alt={post.title} className="w-full h-full object-cover" />
-            <div className="absolute inset-0 bg-gradient-to-t from-background via-background/60 to-transparent" />
+            <div className="absolute inset-0 hidden md:block bg-gradient-to-t from-background via-background/60 to-transparent" />
+            <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-background/90 to-transparent md:hidden" />
           </div>
-          <div className="absolute bottom-0 left-0 right-0 p-6 md:p-10">
+          <div className="bg-card p-4 md:absolute md:bottom-0 md:left-0 md:right-0 md:bg-transparent md:p-10">
             {post.isTrending && (
               <span className="inline-flex items-center gap-1 text-xs font-semibold bg-primary text-primary-foreground px-3 py-1 rounded-full mb-3">
                 <TrendingUp size={12} /> Trending
@@ -36,11 +37,11 @@ const PostCard = ({ post, variant = 'default' }: PostCardProps) => {
             <span className="text-xs text-primary font-medium uppercase tracking-wider block mb-2">
               {categoryLabels[post.category]}
             </span>
-            <h2 className="font-display text-xl md:text-3xl font-bold text-foreground leading-tight mb-3">
+            <h2 className="font-display text-lg md:text-3xl font-bold text-foreground leading-tight mb-3">
               {post.title}
             </h2>
             <p className="text-muted-foreground text-sm line-clamp-2 max-w-2xl">{post.excerpt}</p>
-            <div className="flex items-center gap-4 mt-4 text-muted-foreground text-xs">
+            <div className="mt-4 flex flex-wrap items-center gap-3 md:gap-4 text-muted-foreground text-xs">
               <span className="flex items-center gap-1"><Heart size={12} /> {formatNumber(post.likes)}</span>
               <span className="flex items-center gap-1"><Share2 size={12} /> {formatNumber(post.shares)}</span>
               <span>{post.date}</span>
